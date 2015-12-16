@@ -29,7 +29,7 @@ RUN wget --no-verbose -O /tmp/chromedriver_linux64.zip http://chromedriver.stora
 #========================
 # Selenium Configuration
 #========================
-COPY config.json /opt/selenium/config.json
+COPY generate_config /opt/selenium/generate_config
 
 #=================================
 # Chrome Launch Script Modication

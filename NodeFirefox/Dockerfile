@@ -14,6 +14,6 @@ RUN apt-get update -qqy \
 #========================
 # Selenium Configuration
 #========================
-COPY config.json /opt/selenium/config.json
+COPY generate_config /opt/selenium/generate_config
 
 USER seluser

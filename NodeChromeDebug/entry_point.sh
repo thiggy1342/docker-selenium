@@ -11,6 +11,21 @@ if [ -z "$HUB_PORT_4444_TCP_ADDR" ]; then
   exit 1
 fi
 
+if [ -z "$MAX_INSTANCES" ]; then
+  MAX_INSTANCES="1"
+fi
+
+if [ -z "$MAX_SESSIONS" ]; then
+  MAX_SESSIONS="1"
+fi
+
+ROOT=/opt/selenium
+CONF=$ROOT/config.json
+
+$ROOT/generate_config>$CONF
+echo "starting selenium node with configuration:"
+cat $CONF
+
 function shutdown {
   kill -s SIGTERM $NODE_PID
   wait $NODE_PID
