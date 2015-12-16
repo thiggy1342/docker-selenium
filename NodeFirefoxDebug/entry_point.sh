@@ -12,11 +12,11 @@ if [ -z "$HUB_PORT_4444_TCP_ADDR" ]; then
 fi
 
 if [ -z "$MAX_INSTANCES" ]; then
-  MAX_INSTANCES="1"
+  MAX_INSTANCES=1
 fi
 
 if [ -z "$MAX_SESSIONS" ]; then
-  MAX_SESSIONS="1"
+  MAX_SESSIONS=1
 fi
 
 ROOT=/opt/selenium
